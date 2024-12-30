@@ -1,0 +1,33 @@
+.author {
+   padding: 10px;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid gainsboro;
+}
+
+.author_item {
+   display: flex;
+   column-gap: 20px;
+}
+
+.info {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+
+.stats {
+   background-color: rgb(13, 110, 253);
+   height: fit-content;
+   padding: 5px 10px;
+   border-radius: 5px;
+   color: white;
+}
+
+@media (width < 600px) {
+   .author {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+   }
+}

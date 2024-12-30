@@ -1,0 +1,104 @@
+.right {
+    display:  flex;
+    justify-content: end;
+}
+
+.filters {
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid rgb(193, 193, 193);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.title {
+    background-color: whitesmoke;
+    padding: 10px;
+    border-bottom: 1px solid rgb(193, 193, 193);
+}
+
+.form {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "author author tag tag tag" 
+    "sort min-time max-time groups button";
+    column-gap: 10px;
+}
+
+.form div:nth-child(1) {
+    grid-area: author;
+}
+
+.form div:nth-child(2) {
+    grid-area: tag;
+}
+
+.form div:nth-child(3) {
+    grid-area: sort;
+}
+
+.form div:nth-child(4) {
+    grid-area: min-time;
+}
+
+.form div:nth-child(5) {
+    grid-area: max-time;
+}
+
+.form div:nth-child(6) {
+    grid-area: groups;
+}
+
+.form div:nth-child(7) {
+    grid-area: button;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+}
+
+.pages {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+@media (width < 1030px) {
+    .form {
+        grid-template-areas: 
+        "author author tag tag tag" 
+        "min-time max-time max-time groups groups"
+        "sort sort button button button";
+    }
+}
+
+@media (width < 700px) {
+    .form {
+        grid-template-areas: 
+        "author author tag tag tag" 
+        "sort sort sort groups groups"
+        "min-time min-time max-time max-time max-time"
+        "button button button button button";
+    }
+    
+}
+
+@media (width < 575px) {
+    .pages * {
+        flex: 1;
+        min-width: fit-content;
+    }    
+}
+
+@media (width < 510px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        row-gap: 10px;
+    }
+}

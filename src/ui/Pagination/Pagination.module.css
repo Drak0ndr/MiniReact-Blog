@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container button {
+    min-width: 35px;
+}
+.dots {
+    text-align: center;
+    min-width: 32px;
+}
+
+@media (width < 500px) {
+    .container button {
+        width: fit-content;
+    }
+}

@@ -1,0 +1,51 @@
+.form_element {
+    margin-top: 2px;
+}
+
+.form_element input, .form_element select {
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid gray;
+}
+.checkbox label {
+    display:  flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.checkbox input{
+    width: fit-content;
+    margin-right: 5px;
+}
+
+.error[data-error="false"] {
+    display: none;
+}
+
+.error[data-error="true"] {
+    display: block;
+}
+
+.long input, .long select {
+width: 70%;
+}
+
+.long label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (width < 500px) {
+    .long label {
+        display: block;
+    }
+    .long input, .long select {
+        width: 100%;
+    }
+}

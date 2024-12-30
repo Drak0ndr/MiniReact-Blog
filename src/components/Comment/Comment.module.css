@@ -1,0 +1,74 @@
+.comment {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    font-size: 14px;
+}
+
+.content {
+    font-size: 18px;
+}
+
+.func {
+    color: rgb(13,110,253);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit {
+    font-size: 14px;
+    color: gray;
+    position: relative;
+}
+
+.edit[data-modifed=false], .edit[data-modifed=null]  {
+    display: none;
+}
+
+.edit_tooltip {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: max-content;
+    padding: 5px;
+    border-radius:5px;
+    backdrop-filter: blur(5px);
+    color: black;
+    display: none;
+}
+
+.edit:hover {
+    .edit_tooltip {
+        display: block;
+    }
+}
+
+.other_comments {
+    border-left: 2px solid rgb(112, 184, 255);
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.edit_container {
+    display: flex;
+    column-gap: 50px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    .content {
+        flex: 1;
+        max-width: 100%;
+        word-break: break-word;
+    }
+}
+
+input.content {
+    font-size: 16px;
+}
